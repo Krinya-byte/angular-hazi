@@ -14,8 +14,12 @@ import { FileUploadService } from 'src/app/services/file-upload/file-upload.serv
   templateUrl: './image-result.component.html',
   styleUrls: ['./image-result.component.scss']
 })
-
+/*
+*Image-result component to view the face detection on the image
+*
+*/
 export class ImageResultComponent implements OnInit {
+  //TODO subscriptionKey security issue
   faceApiResponse$: Observable<FaceRecognitionResponse[]>;
   faces: FaceRecognitionResponse[] = []
   subscriptionKey = '4abea019a5114b0dbffa3eb1b5eee44d';
@@ -49,7 +53,7 @@ export class ImageResultComponent implements OnInit {
   clearCanvas() {
     this.context.clearRect(0, 0, this.imageLayer.nativeElement.width, this.imageLayer.nativeElement.height);
   }
-
+  //draw the image and the rectangles around the detected faces
   drawImage() {
     var hover = false;
     var image = new Image()
@@ -61,6 +65,7 @@ export class ImageResultComponent implements OnInit {
       this.imageLayerElement.width = image.width;
       this.imageLayerElement.height = image.height;
       this.drawImageOnCanvas(image);
+      //offset for the exact clicking position
       var r = this.imageLayerElement.getBoundingClientRect();
       this.offsetX = r.left;
       this.offsetY = r.top;
@@ -88,11 +93,14 @@ export class ImageResultComponent implements OnInit {
     this.context.strokeStyle = "red";
     this.context.stroke();
   }
-
+  /*
+  *handles the click event, when somebody is clicking on the chosen rectangle
+  *redirects to the image-details component
+  */
   handleMouseClick(e) {
     e.preventDefault();
     e.stopPropagation();
-
+    
     var mouseX = e.clientX - this.offsetX;
     var mouseY = e.clientY - this.offsetY;
     var faces = this.imageProcessService.getFaces()
