@@ -1,0 +1,7 @@
+<mat-tab-group>
+  <mat-tab *ngFor="let image of imageList" >
+    <ng-template matTabContent>
+      <img [src]="image" alt="image">
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>

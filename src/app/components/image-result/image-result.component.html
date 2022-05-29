@@ -1,0 +1,9 @@
+<div class="container" *ngIf="responseGood">
+  <canvas width="500px" height="500px" #imageLayer class="image-layer" (click)="handleMouseClick($event)"></canvas>
+  <router-outlet class="details"></router-outlet>
+  <button mat-raised-button color="accent">
+    <a class="router-link" routerLink="/file-upload" routerLinkActive="file-upload">
+        Choose another file!
+    </a>
+    </button>
+</div>

@@ -1,0 +1,13 @@
+<div class="file-upload-container">
+<ngx-dropzone (change)="onSelect($event)" [accept]="'image/jpeg'" [multiple]="false">
+	<ngx-dropzone-label>Drop the image files here please!</ngx-dropzone-label>
+	<ngx-dropzone-preview *ngFor="let f of this.localfileList" [removable]="true" (removed)="onRemove(f)">
+		<ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+	</ngx-dropzone-preview>
+</ngx-dropzone>
+<button mat-raised-button color="accent">
+<a class="router-link" routerLink="/image-result" routerLinkActive="image-result">
+    Begin the image processing
+</a>
+</button>
+</div>

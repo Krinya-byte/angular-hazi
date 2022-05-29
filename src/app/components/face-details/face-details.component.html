@@ -1,0 +1,14 @@
+<!-- Button trigger modal -->
+<mat-card class="details">
+    <mat-card-title>Image Details</mat-card-title>
+    <mat-card-subtitle>{{this.faceId}}</mat-card-subtitle>
+    <mat-card-content>
+        <p>{{this.faceAttributes.age}}</p>
+        <p>{{this.faceAttributes.gender}}</p>
+        <img mat-card-sm-image *ngIf="!faceAttributes.glasses.includes('No') else elseBlock" src="assets/Hipster-glasses-by-Rones.png">
+        <ng-template  #elseBlock><img mat-card-sm-image #elseBlock src="assets/35189516-no-glasses.jpeg"></ng-template>
+
+        <p *ngIf="this.faceAttributes.smile === 1  else elseBlock1">I am smiling :D</p>
+        <ng-template  #elseBlock1><p>I am not smiling :C</p></ng-template>
+    </mat-card-content>
+</mat-card>
