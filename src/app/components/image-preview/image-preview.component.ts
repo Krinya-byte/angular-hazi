@@ -6,6 +6,11 @@ import {FileUploadService} from "../../services/file-upload/file-upload.service"
   templateUrl: './image-preview.component.html',
   styleUrls: ['./image-preview.component.scss']
 })
+/*
+*TODO  create a preview for multiple uploaded images
+*get the uploaded file
+*make a tabulator or pagination for the multiple images
+*/
 export class ImagePreviewComponent implements OnInit {
   imageList : string[] = []
   selectedTab = 0
