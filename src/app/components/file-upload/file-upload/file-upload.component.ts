@@ -8,8 +8,11 @@ import { FileUploadService } from 'src/app/services/file-upload/file-upload.serv
   styleUrls: ['./file-upload.component.scss']
 })
 
+/*
+FileUploadComponent for uploading the files from the computer
+*/
 export class FileUploadComponent implements OnInit {
-
+   //using localfilelist, to show the files on the drag and drop item
   localfileList: File[] = [];
 
   constructor(private fileUploadService: FileUploadService) { }
