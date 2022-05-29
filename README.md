@@ -11,16 +11,16 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 Using Microsoft Azure Face API https://azure.microsoft.com/en-us/services/cognitive-services/face/
 
 ### Components:
-File-upload component
-  File upload with drag and drop
-  only pictures can be uploaded
-Image-result component
-  Image on a canvas, where the detected faces shows up
-Image-details component
-  Show details of the detected face on an angular-material-component
+- File-upload component
+  - File upload with drag and drop
+  - only pictures can be uploaded
+- Image-result component
+  - Image on a canvas, where the detected faces shows up
+- Image-details component
+  - Show details of the detected face on an angular-material-component
 
 ### Services:
-File upload service:
-  Generate an image-src fro mthe taken file, to view on a Canvas
-Image-process service:
-  Request and handle the data from the API.
+- File upload service:
+  - Generate an image-src fro mthe taken file, to view on a Canvas
+- Image-process service:
+  - Request and handle the data from the API.
