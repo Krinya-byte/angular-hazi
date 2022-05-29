@@ -13,7 +13,9 @@ import { ImageProcessService } from 'src/app/services/image-process-service/imag
   }
 })
 
-
+/*
+FaceDetailsComponent to show the details of a detected face 
+*/
 export class FaceDetailsComponent implements OnInit {
   faceAttributes: FaceAttributes = {smile: 1, gender :'maleDefault', age : 1, glasses : 'YesDefault' }
   faceId : string = ''
