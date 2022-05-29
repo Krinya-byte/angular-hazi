@@ -17,6 +17,7 @@ import { ImageProcessService } from 'src/app/services/image-process-service/imag
 export class FaceDetailsComponent implements OnInit {
   faceAttributes: FaceAttributes = {smile: 1, gender :'maleDefault', age : 1, glasses : 'YesDefault' }
   faceId : string = ''
+  //face-details component, getting the id from the param, and getting the face from the service
   constructor(private router: ActivatedRoute, private imageProcessService: ImageProcessService) {
     this.router.paramMap.subscribe(params => {
       this.faceId = params.get('id')
