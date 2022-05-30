@@ -9,6 +9,10 @@ import { FaceAttributes, FaceRecognitionResponse, FaceRectangle } from '../../mo
 @Injectable({
   providedIn: 'root'
 })
+/*
+*imageProcessService where we request the data from the API 
+*other fucntions is for data management
+*/
 export class ImageProcessService {
 
   constructor(private http: HttpClient) { }
